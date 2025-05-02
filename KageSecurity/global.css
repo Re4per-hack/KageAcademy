@@ -1,4 +1,29 @@
 body {
-    background-color: #1A1919;
+    background-color: #1a1919;
 }
 
+.title-background {
+
+    background: #0c0d0a;
+}
+
+@keyframes mover {
+    0%   { transform: translate(0,0);}
+    100% { transform: translate(8px, -8px )}
+  }
+
+  .animate-alzar:hover {
+    animation: mover 0.3s ease-in-out forwards; /* Controla la duración y el tipo de animación */
+  }
+
+@font-face {
+  font-family: 'Coolvetica' ;
+  src: url(/fonts/Coolvetica-Italic.woff), url(/fonts/Coolvetica-Italic.woff2);
+}
+
+.hueco {
+  font-size: 80px;
+  color: transparent; /* relleno transparente */
+  -webkit-text-stroke: 1px #ffffff; /* contorno verde */
+  font-family: 'Coolvetica', sans-serif;
+}
