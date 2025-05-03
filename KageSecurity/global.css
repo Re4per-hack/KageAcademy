@@ -13,7 +13,7 @@ body {
   }
 
   .animate-alzar:hover {
-    animation: mover 0.3s ease-in-out forwards; /* Controla la duración y el tipo de animación */
+    animation: mover 0.3s ease-in-out forwards; 
   }
 
 @font-face {
@@ -22,8 +22,8 @@ body {
 }
 
 .hueco {
-  font-size: 80px;
-  color: transparent; /* relleno transparente */
-  -webkit-text-stroke: 1px #ffffff; /* contorno verde */
+  font-size: 100px;
+  color: transparent; 
+  -webkit-text-stroke: 2px #ffffff; 
   font-family: 'Coolvetica', sans-serif;
 }

@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="fixed flex top-0 w-screen h-32 title-background shadow-md items-center">
+  <div class="fixed z-10 flex top-0 w-screen h-32 title-background shadow-md items-center">
     <img class="relative top-0 w-64 h-auto" alt="Logo" src="Images/title.webp" style="margin-left: 15px;">
     <div class="absolute right-10 w-36 h-7 rounded-full font-extrabold italic transition-all animate-alzar" style="background: #000000;" alt="Fondo Iniciar Sesion"></div>
     <div class="absolute right-52 w-36 h-7 rounded-full font-extrabold italic transition-all animate-alzar" style="background: #000000;" alt="Fondo registrarse"></div>
@@ -17,24 +18,26 @@
     <button class="absolute text-white right-52 w-36 h-7 rounded-full font-extrabold italic transition-all duration-300 ease-in-out hover:-translate-y-2 hover:translate-x-2" style="font-family: 'Roboto', sans-serif; background: #2C2B2B;">
       Registrarse
     </button>
-    <div class="absolute bottom-0 w-screen h-px bg-red-50">
+    <div class="absolute bottom-0 w-screen h-px bg-red-50"></div>
+  </div>
 
-    <p class="text-white" style="font-family: 'Coolvetica'; font-size: 80px;">
+  <div class="relative h-screen mt-24" >
+    <p class="absolute text-white left-10 top-16 " style="font-family: 'Coolvetica'; font-size: 100px; ">
       Aprende
-    </p>
-    <p class="hueco">
+    </p> 
+
+    <p class="absolute hueco left-10 top-44 ">
       ciberseguridad
     </p>
-    <p>
+
+    <p class="absolute text-white left-10 top-[280px]" style="font-family: 'Coolvetica'; font-size: 100px;">
       desde cero
     </p>
 
-      
-      
-
-
-
-    
+    <p class="absolute text-white left-10 top-[450px] " style="font-family: 'Montserrat', sans-serif; font-style: italic; font-size: 32px;">
+      LLeva tus habilidades al siguiente nivel, con horas de contenido práctico o clases 
+personalizadas.
+    </p>
   </div>
 </body>
 </html>
