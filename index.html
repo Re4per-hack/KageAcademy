@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="global.css">
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
@@ -9,41 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <style>
-    body {
-    background-color: #1a1919;
-}
-
-.title-background {
-
-    background: #0c0d0a;
-}
-
-@keyframes mover {
-    0%   { transform: translate(0,0);}
-    100% { transform: translate(8px, -8px )}
-  }
-
-  .animate-alzar:hover {
-    animation: mover 0.3s ease-in-out forwards; 
-  }
-
-@font-face {
-  font-family: 'Coolvetica' ;
-  src: url(/fonts/Coolvetica-Italic.woff), url(/fonts/Coolvetica-Italic.woff2);
-}
-
-.hueco {
-  font-size: 100px;
-  color: transparent; 
-  -webkit-text-stroke: 2px #ffffff; 
-  font-family: 'Coolvetica', sans-serif;
-}
-
-
-
-
-  </style>
 
   <div class="fixed z-10 flex top-0 w-screen h-32 title-background shadow-md items-center">
     <img class="relative top-0 w-64 h-auto" alt="Logo" src="Images/title.webp" style="margin-left: 15px;">
