@@ -18,7 +18,7 @@ body {
 
 @font-face {
   font-family: 'Coolvetica' ;
-  src: url(https://re4per-hack.github.io/KageAcademy/fonts/Coolvetica-Italic.woff1), url(https://re4per-hack.github.io/KageAcademy/fonts/Coolvetica-Italic.woff2);
+  src: url(https://re4per-hack.github.io/KageAcademy/fonts/Coolvetica-Italic.woff), url(https://re4per-hack.github.io/KageAcademy/fonts/Coolvetica-Italic.woff2);
 }
 
 .hueco {
