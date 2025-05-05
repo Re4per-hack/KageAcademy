@@ -18,7 +18,7 @@ body {
 
 @font-face {
   font-family: 'Coolvetica' ;
-  src: url(KageSecurity/fonts/Coolvetica-Italic.woff), url(/fonts/Coolvetica-Italic.woff2);
+  src: url(KageSecurity/fonts/Coolvetica-Italic.woff), url(KageSecurity/fonts/Coolvetica-Italic.woff2);
 }
 
 .hueco {
