@@ -35,3 +35,18 @@ body {
   -webkit-text-stroke: 2px #ffffff; 
   font-family: 'Coolvetica', sans-serif;
 }
+
+@keyframes skullScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position:  -60px -60px; /* diagonal hacia arriba a la derecha */
+  }
+}
+
+@layer utilities {
+  .animate-skullScroll {
+    animation: skullScroll 10s linear infinite;
+  }
+}
