@@ -11,7 +11,7 @@ body {
   opacity: 0.09;
 
   background-repeat: repeat;
-  background-image: url(/Images/skull.png);
+  background-image: url(/KageAcademy/Images/skull.png);
 
 }
 
@@ -26,7 +26,7 @@ body {
 
 @font-face {
   font-family: 'Coolvetica' ;
-  src: url(/fonts/Coolvetica-Italic.woff), url(/fonts/Coolvetica-Italic.woff2);
+  src: url(/KageAcademy/fonts/Coolvetica-Italic.woff), url(/KageAcademy/fonts/Coolvetica-Italic.woff2);
 }
 
 .hueco {
