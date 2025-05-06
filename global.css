@@ -7,6 +7,14 @@ body {
     background: #0c0d0a;
 }
 
+.skull {
+  opacity: 0.09;
+
+  background-repeat: repeat;
+  background-image: url(/Images/skull.png);
+
+}
+
 @keyframes mover {
     0%   { transform: translate(0,0);}
     100% { transform: translate(8px, -8px )}
@@ -18,7 +26,7 @@ body {
 
 @font-face {
   font-family: 'Coolvetica' ;
-  src: url(/KageAcademy/fonts/Coolvetica-Italic.woff), url(/KageAcademy/fonts/Coolvetica-Italic.woff2);
+  src: url(/fonts/Coolvetica-Italic.woff), url(/fonts/Coolvetica-Italic.woff2);
 }
 
 .hueco {
