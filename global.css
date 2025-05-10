@@ -7,13 +7,9 @@ body {
     background: #0c0d0a;
 }
 
-.skull {
-  opacity: 0.09;
 
-  background-repeat: repeat;
-  background-image: url(/KageAcademy/Images/skull.png);
 
-}
+
 
 @keyframes mover {
     0%   { transform: translate(0,0);}
