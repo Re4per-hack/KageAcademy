@@ -1,13 +1,14 @@
 <!DOCTYPE html >
 <html lang="es">
     <head>
+        
         <link rel="stylesheet" href="global.css">
         <meta charset="UTF-8">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="h-[1500px]">
 
-        <div class=" fixed flex title-background w-full h-[100px] ">
+        <div class="  z-10 fixed flex title-background w-full h-[100px] ">
             <div class="absolute w-full h-[1px]  bg-white bottom-0">
 
 
@@ -17,44 +18,166 @@
         </div>
 
 
-        <p class="absolute text-white  text-[50px] left-1/2 top-40  w-full px-10 -translate-x-1/2 text-center  " style="font-family: 'Coolvetica';">
+        <p class="absolute text-white z-0  text-[50px] left-1/2 top-40  w-full px-10 -translate-x-1/2 text-center  " style="font-family: 'Coolvetica';">
       Elije la mejor fecha para tu hora gratuita en Kage Academy
     </p>
     
     <div class="relative  title-background w-full top-[400px] h-[70px]"> 
         
         <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Hora (GMT-5)</p>
-    
+        
     
     </div>
 
-    <div class="relative top-[450px] w-full h-[50px]" style="background-color: #262525;"></div>
+    <div class="relative top-[450px] left-1/2 -translate-x-1/2 w-[200px] h-[40px]" style="background-color: #262525;">
 
-    <div class="relative  title-background w-full top-[90px] h-[70px]"> 
+        <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">20:00</p>
+
+        <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+
+            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+
+        </div>
+        
+        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+
+            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="relative  title-background w-full top-[500px] h-[70px]"> 
         
         <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Día</p>
     
     
     </div>
-    <div class="relative  title-background w-full top-[800px] h-[70px]"> 
+
+    <div class="relative top-[550px] left-1/2 -translate-x-1/2 w-[200px] h-[40px]" style="background-color: #262525;">
+
+        <p id="Dia" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10</p>
+
+         <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+
+            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+
+            
+        </div>
+        
+        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+
+            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+        </div>
+    </div>
+
+    
+
+    <div class="relative  title-background w-full top-[600px] h-[70px]"> 
         
         <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Mes</p>
     
     
     </div>
-    <div class="relative  title-background w-full top-[1000px] h-[70px]"> 
+
+    <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
+
+        <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
+
+         <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+
+            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+
+            
+        </div>
+        
+        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+
+            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+        </div>
+
+    </div>
+
+
+    <div class="relative  title-background w-full top-[700px] h-[70px]"> 
         
         <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">2025</p>
     
     
     </div>
 
+
+    <div class="relative top-[720px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
+
+        <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
+        
+        <input class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-family: 'Coolvetica';">
+            
+        </input>
+
+    </div>
+
+
+    <div class="relative top-[780px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
+
+        <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
+
+        
+        
+        <input class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-family: 'Coolvetica';">
     
+            
+        </input>
+
+        
+
+    </div>
+
+    <div class="relative grid left-1/2 bg-gradient-to-t from-[#1EA968] to-[#6BA69A]  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl cursor-pointer" >
+
+        <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Pedir cita</p>
+
+
+    </div>
+
+
+    <script>
+
+        const fechaActual = new Date();
+
+        var dia = fechaActual.getDate();        
+        var mes = fechaActual.getMonth() + 1;    
+        var año = fechaActual.getFullYear();
+        var hora = fechaActual.getHours();
+
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+               "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        
+        document.getElementById("Hora").innerText = `${hora}:00`;
+        document.getElementById("Dia").innerText = dia + 1;
+        document.getElementById("Mes").innerText = meses[0];
+
+        if (dia == fechaActual.getDate()){
+
+
+
+        }
+        
 
         
 
 
 
+        
+
+
+
+
+    </script>
     </body>
 
 
