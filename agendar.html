@@ -24,24 +24,24 @@
     
     <div class="relative  title-background w-full top-[400px] h-[70px]"> 
         
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Hora (GMT-5)</p>
+        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Mes</p>
         
     
     </div>
 
-    <div class="relative top-[450px] left-1/2 -translate-x-1/2 w-[200px] h-[40px]" style="background-color: #262525;">
+    <div class="relative top-[450px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
 
-        <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">20:00</p>
+        <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
 
-        <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+        <div id="MesL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
 
-            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+            <img id="MesLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
         </div>
         
-        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+        <div  id="MesR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
-            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+            <img id="MesRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
         </div>
 
@@ -60,16 +60,14 @@
 
         <p id="Dia" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10</p>
 
-         <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+        <div id="DiaL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
 
-            <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
-
-            
+            <img id="DiaLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
         </div>
         
-        <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+        <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
-            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+            <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
         </div>
     </div>
@@ -78,23 +76,22 @@
 
     <div class="relative  title-background w-full top-[600px] h-[70px]"> 
         
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Mes</p>
-    
+        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Hora (Según horario EEUU)</p>
     
     </div>
 
     <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
 
-        <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
+        <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
 
-         <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+        <div id="HoraR" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
 
             <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
             
         </div>
         
-        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+        <div id="HoraL" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
 
             <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -147,32 +144,6 @@
 
     <script>
 
-        const fechaActual = new Date();
-
-        var dia = fechaActual.getDate();        
-        var mes = fechaActual.getMonth() + 1;    
-        var año = fechaActual.getFullYear();
-        var hora = fechaActual.getHours();
-
-        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-               "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        
-        document.getElementById("Hora").innerText = `${hora}:00`;
-        document.getElementById("Dia").innerText = dia + 1;
-        document.getElementById("Mes").innerText = meses[0];
-
-        recolor();
-
-        document.getElementById("DiaR").addEventListener("click", function() {
-
-            const selectDay = document.getElementById("Dia").textContent;
-            document.getElementById("Dia").innerText = 1 + parseInt(selectDay);
-            recolor();
-
-
-            
-        });
-
 
         function recolor(){
 
@@ -182,14 +153,197 @@
             console.log(fechaActual.getDate())
 
             if (diaActualInt == fechaActual.getDate() + 1){
-                            document.getElementById("DiaRarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
 
 
             }else{
 
-                document.getElementById("DiaRarrow").src = "./Images/flechal.png";
+                document.getElementById("DiaLarrow").src = "./Images/flechal.png";
 
             }
+
+
+        
+
+        }
+
+
+        const fechaActual = new Date();
+
+        const dia = fechaActual.getDate();        
+        const mes = fechaActual.getMonth() ;    
+        const año = fechaActual.getFullYear();
+        const hora = fechaActual.getHours();
+
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+               "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        
+        document.getElementById("Hora").innerText = `${hora}:00`;
+        document.getElementById("Dia").innerText = dia + 1;
+        document.getElementById("Mes").innerText = meses[mes];
+
+        remaker();
+
+
+        document.getElementById("DiaR").addEventListener("click", function() {
+
+            const selectDay = document.getElementById("Dia").textContent;
+            
+            document.getElementById("Dia").innerText = 1 + parseInt(selectDay);
+            
+            remaker();
+
+
+        });
+
+        document.getElementById("DiaL").addEventListener("click", function() {
+
+            const selectDay = document.getElementById("Dia").textContent;
+            
+            document.getElementById("Dia").innerText =  parseInt(selectDay) - 1;
+            
+            remaker();
+
+
+        });
+
+        document.getElementById("MesL").addEventListener("click", function() {
+
+            const selectMes = document.getElementById("Mes").textContent;
+            const actualMes = meses[mes]
+
+            if (selectMes ==  actualMes){
+
+                remaker();
+
+
+            }else{
+
+                const newMes = meses[meses.indexOf(selectMes) - 1];
+                document.getElementById("Mes").innerText =  newMes;
+
+            }
+
+            
+            
+            remaker();
+
+
+        });
+
+        document.getElementById("MesR").addEventListener("click", function() {
+
+            const selectMes = document.getElementById("Mes").textContent;
+            const actualMes = meses[mes]
+            console.log(selectMes)
+
+            if (selectMes == "Diciembre"){
+
+                remaker();
+
+
+            }else{
+
+                const newMes = meses[meses.indexOf(selectMes) + 1];
+                document.getElementById("Mes").innerText =  newMes;
+                remaker();
+                
+
+            }
+
+            
+
+        });
+
+
+        
+
+        function remaker(){
+
+            
+
+            
+            const mesSelected = document.getElementById("Mes").textContent;
+            const mesSelectedInt = meses.indexOf(mesSelected) + 1;
+            const diasMes = new Date(2025, mesSelectedInt, 0).getDate();
+            const minDia = dia + 1 ;
+            const diaSelected = document.getElementById("Dia").textContent;
+            const diaSelectedInt =  parseInt(diaSelected);
+            const minMes = mes + 1
+            const minMesText = meses[mes]
+
+            
+            
+            
+
+
+            if (mesSelectedInt <= minMes ){
+
+                document.getElementById("Mes").innerText = minMesText
+                document.getElementById("MesLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("MesLarrow").classList.remove("cursor-pointer")
+                
+
+            }else if (mesSelected == "Diciembre"){
+                document.getElementById("Mes").innerText = "Diciembre"
+                document.getElementById("MesRarrow").src = "./Images/flechaoffr.png";
+                document.getElementById("MesRarrow").classList.remove("cursor-pointer")
+
+
+
+            }else{
+
+                document.getElementById("MesLarrow").src = "./Images/flechal.png";
+                document.getElementById("MesLarrow").classList.add("cursor-pointer");
+                document.getElementById("MesRarrow").src = "./Images/flechar.png";
+                document.getElementById("MesRarrow").classList.add("cursor-pointer");
+
+
+            }
+
+
+            
+
+
+            if ( diaSelectedInt >= diasMes ){
+
+
+                document.getElementById("Dia").innerText = diasMes
+                document.getElementById("DiaRarrow").src = "./Images/flechaoffr.png";
+                document.getElementById("DiaRarrow").classList.remove("cursor-pointer")
+            }else{
+
+                document.getElementById("DiaRarrow").src = "./Images/flechar.png";
+                document.getElementById("DiaRarrow").classList.add("cursor-pointer")
+            }
+
+
+            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes ){
+                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
+                document.getElementById("Dia").innerText = minDia
+
+            }else{
+
+                document.getElementById("DiaLarrow").src = "./Images/flechal.png";
+                document.getElementById("DiaLarrow").classList.add("cursor-pointer")
+
+            }
+
+            if (diaSelectedInt <= 1 ){
+
+                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
+                document.getElementById("Dia").innerText = 1
+
+
+            }
+
+
+
+
+
+
         }
 
             
