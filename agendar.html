@@ -62,12 +62,12 @@
 
          <div class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
 
-            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+            <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
             
         </div>
         
-        <div class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+        <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
 
             <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -161,12 +161,38 @@
         document.getElementById("Dia").innerText = dia + 1;
         document.getElementById("Mes").innerText = meses[0];
 
-        if (dia == fechaActual.getDate()){
+        recolor();
+
+        document.getElementById("DiaR").addEventListener("click", function() {
+
+            const selectDay = document.getElementById("Dia").textContent;
+            document.getElementById("Dia").innerText = 1 + parseInt(selectDay);
+            recolor();
 
 
+            
+        });
 
+
+        function recolor(){
+
+            const diaActual = document.getElementById("Dia").textContent;
+
+            if (parseInt(diaActual) == fechaActual.getDate()){
+                            document.getElementById("DiaRarrow").src = "./Images/flechaoffl.png";
+
+
+                        }else{
+
+                            document.getElementById("DiaRarrow").src = "./Images/flechal.png";
+
+                        }
         }
-        
+
+            
+
+
+
 
         
 
