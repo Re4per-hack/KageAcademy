@@ -177,16 +177,19 @@
         function recolor(){
 
             const diaActual = document.getElementById("Dia").textContent;
+            diaActualInt =  parseInt(diaActual)
+            console.log(diaActualInt)
+            console.log(fechaActual.getDate())
 
-            if (parseInt(diaActual) == fechaActual.getDate()){
+            if (diaActualInt == fechaActual.getDate() + 1){
                             document.getElementById("DiaRarrow").src = "./Images/flechaoffl.png";
 
 
-                        }else{
+            }else{
 
-                            document.getElementById("DiaRarrow").src = "./Images/flechal.png";
+                document.getElementById("DiaRarrow").src = "./Images/flechal.png";
 
-                        }
+            }
         }
 
             
