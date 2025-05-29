@@ -275,6 +275,16 @@
             remaker();
         });
 
+        document.getElementById("HoraR").addEventListener("click", function() {
+
+            const selectHora = document.getElementById("Hora").textContent;
+            const selectHoraInt = parseInt(selectHora.split(":")[0],10)
+            const newHora = selectHoraInt + 1
+            document.getElementById("Hora").innerText = `${newHora}:00` 
+
+            remaker();
+        });
+
 
         
 
@@ -365,22 +375,11 @@
 
             // Hora 
 
-            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes && horaSelectedInt <= hora ){
-                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
-                document.getElementById("Hora").innerText = `${hora}:00`
-
-            }else{
-
-                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
-                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
-
-            }
 
             if ( horaSelectedInt >= 20 ){
 
 
-                document.getElementById("Hora").innerText = `8:00`
+                document.getElementById("Hora").innerText = `20:00`
                 document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
                 document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
             }else{
@@ -392,18 +391,33 @@
             if ( horaSelectedInt <= 8 ){
 
 
-                document.getElementById("Hora").innerText = `20:00`
-                document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
-                document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
+                document.getElementById("Hora").innerText = `19:00`
+                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
             }else{
 
-                document.getElementById("HoraRarrow").src = "./Images/flechar.png";
-                document.getElementById("HoraRarrow").classList.add("cursor-pointer")
+                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
+                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
             }
 
+            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes && horaSelectedInt <= hora ){
+                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+                document.getElementById("Hora").innerText = `${hora}:00`
+
+            }else if ( horaSelectedInt <= 8 ){
 
 
+                document.getElementById("Hora").innerText = `8:00`
+                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+            }else{
 
+                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
+                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
+            } 
+
+            
 
 
         }
