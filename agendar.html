@@ -110,9 +110,11 @@
 
     <div class="relative top-[720px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
 
+        <p class="absolute right-0 text-white font-italic" style="font-size: 20px; font-family: 'Roboto';" > Error </p>
+
         <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
         
-        <input class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-family: 'Coolvetica';">
+        <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" onchange="emailverify();" style=" font-size: 25px; font-family: 'Coolvetica';">
             
         </input>
 
@@ -121,11 +123,11 @@
 
     <div class="relative top-[780px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
 
-        <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
+        <p class="absolute px-0 top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
 
         
         
-        <input class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-family: 'Coolvetica';">
+        <input id="Nombre" class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-size: 25px; font-family: 'Coolvetica';">
     
             
         </input>
@@ -134,7 +136,7 @@
 
     </div>
 
-    <div class="relative grid left-1/2 bg-gradient-to-t from-[#1EA968] to-[#6BA69A]  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl cursor-pointer" >
+    <div id="Enviar"  class="relative grid left-1/2   place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl " >
 
         <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Pedir cita</p>
 
@@ -144,29 +146,31 @@
 
     <script>
 
-
-        function recolor(){
-
-            const diaActual = document.getElementById("Dia").textContent;
-            diaActualInt =  parseInt(diaActual)
-            console.log(diaActualInt)
-            console.log(fechaActual.getDate())
-
-            if (diaActualInt == fechaActual.getDate() + 1){
-                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
-
-
-            }else{
-
-                document.getElementById("DiaLarrow").src = "./Images/flechal.png";
-
-            }
-
+        
+        
+        document.getElementById("Enviar").classList.add("bg-gray-500");
 
         
 
+        function emailverify(){
+            const input = document.getElementById("Email")
+            const email = input.value.trim()
+
+            
+            console.log(email)
+
+
         }
 
+
+
+
+            
+
+        
+        
+
+        // bg-gradient-to-t from-[#1EA968] to-[#6BA69A] cursor-pointer      
 
         const fechaActual = new Date();
 
@@ -417,10 +421,11 @@
                 document.getElementById("HoraLarrow").classList.add("cursor-pointer")
             } 
 
-            
-
-
         }
+
+        
+
+
 
             
 
