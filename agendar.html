@@ -84,16 +84,16 @@
 
         <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
 
-        <div id="HoraR" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center cursor-pointer  " >
+        <div id="HoraL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center  " >
 
-            <img class="h-6 w-auto " src="./Images/flechal.png">  </img>
+            <img id="HoraLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
             
         </div>
         
-        <div id="HoraL" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background cursor-pointer place-items-center" >
+        <div id="HoraR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background place-items-center" >
 
-            <img class="h-6 w-auto " src="./Images/flechar.png">  </img>
+            <img id="HoraRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
         </div>
 
@@ -211,8 +211,9 @@
 
             const selectMes = document.getElementById("Mes").textContent;
             const actualMes = meses[mes]
-
+            
             if (selectMes ==  actualMes){
+                
 
                 remaker();
 
@@ -221,12 +222,19 @@
 
                 const newMes = meses[meses.indexOf(selectMes) - 1];
                 document.getElementById("Mes").innerText =  newMes;
+                if (newMes == actualMes){
+                    document.getElementById("Dia").innerText =  dia + 1;
+                }else{
 
+                    document.getElementById("Dia").innerText =  1 ;
+
+                }
+                remaker();
             }
 
             
             
-            remaker();
+            
 
 
         });
@@ -246,6 +254,7 @@
 
                 const newMes = meses[meses.indexOf(selectMes) + 1];
                 document.getElementById("Mes").innerText =  newMes;
+                document.getElementById("Dia").innerText =  1;
                 remaker();
                 
 
@@ -253,6 +262,17 @@
 
             
 
+        });
+
+        document.getElementById("HoraL").addEventListener("click", function() {
+
+            const selectHora = document.getElementById("Hora").textContent;
+            const selectHoraInt = parseInt(selectHora.split(":")[0],10)
+            const newHora = selectHoraInt - 1
+            document.getElementById("Hora").innerText = `${newHora}:00`
+
+            
+            remaker();
         });
 
 
@@ -271,11 +291,17 @@
             const diaSelectedInt =  parseInt(diaSelected);
             const minMes = mes + 1
             const minMesText = meses[mes]
+            const horaSelected = document.getElementById("Hora").textContent;
+            const horaSelectedInt = parseInt(horaSelected.split(":")[0],10 )
+
 
             
             
-            
+            document.getElementById("MesRarrow").classList.add("cursor-pointer");
+            document.getElementById("MesLarrow").classList.add("cursor-pointer");
 
+
+            // Mes
 
             if (mesSelectedInt <= minMes ){
 
@@ -294,15 +320,12 @@
             }else{
 
                 document.getElementById("MesLarrow").src = "./Images/flechal.png";
-                document.getElementById("MesLarrow").classList.add("cursor-pointer");
                 document.getElementById("MesRarrow").src = "./Images/flechar.png";
-                document.getElementById("MesRarrow").classList.add("cursor-pointer");
-
-
+                
             }
 
 
-            
+            // DIA
 
 
             if ( diaSelectedInt >= diasMes ){
@@ -337,6 +360,45 @@
                 document.getElementById("Dia").innerText = 1
 
 
+            }
+
+
+            // Hora 
+
+            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes && horaSelectedInt <= hora ){
+                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+                document.getElementById("Hora").innerText = `${hora}:00`
+
+            }else{
+
+                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
+                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
+
+            }
+
+            if ( horaSelectedInt >= 20 ){
+
+
+                document.getElementById("Hora").innerText = `8:00`
+                document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
+                document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
+            }else{
+
+                document.getElementById("HoraRarrow").src = "./Images/flechar.png";
+                document.getElementById("HoraRarrow").classList.add("cursor-pointer")
+            }
+            
+            if ( horaSelectedInt <= 8 ){
+
+
+                document.getElementById("Hora").innerText = `20:00`
+                document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
+                document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
+            }else{
+
+                document.getElementById("HoraRarrow").src = "./Images/flechar.png";
+                document.getElementById("HoraRarrow").classList.add("cursor-pointer")
             }
 
 
