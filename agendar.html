@@ -111,11 +111,11 @@
     <div class="relative top-[720px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
 
 
-        <p id="Errormsg1" class="absolute right-0 text-[#9c3123] " style="font-style: italic;  font-size: 15px; font-family: 'Arial';" > Ingrese un correo electrónico válido.</p>
+        <p id="Errormsg1" display="none" class="absolute right-0 text-[#9c3123] " style="font-style: italic;  font-size: 15px; font-family: 'Arial';" > Ingrese un correo electrónico válido.</p>
 
         <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
         
-        <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" onchange="emailverify();" style=" font-size: 25px; font-family: 'Coolvetica';">
+        <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" onchange="dataverify();" style=" font-size: 25px; font-family: 'Coolvetica';">
             
         </input>
 
@@ -127,8 +127,8 @@
         <p class="absolute px-0 top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
 
         
-        
-        <input id="Nombre" class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-size: 25px; font-family: 'Coolvetica';">
+         
+        <input id="Nombre" class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-size: 25px; font-family: 'Coolvetica';" onchange="dataverify();">
     
             
         </input>
@@ -137,7 +137,7 @@
 
     </div>
 
-    <div id="Enviar"  class="relative grid left-1/2   place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl " >
+    <div id="Enviar" onclick="sendu();" class="relative grid left-1/2  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl " >
 
         <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Pedir cita</p>
 
@@ -151,20 +151,89 @@
         
         document.getElementById("Enviar").classList.add("bg-gray-500");
 
-        
+        document.getElementById("Errormsg1").style.display = "none"
 
-        function emailverify(){
+        function dataverify(){
             const input = document.getElementById("Email");
             const email = input.value.trim();
             const esCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            if (esCorreoValido){
+            
+            const input2 = document.getElementById("Nombre");
+            const name = input2.value.trim();
+            
+            if (!esCorreoValido){
+
+                document.getElementById("Errormsg1").style.display = "block"
+                document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                document.getElementById("Enviar").classList.add("bg-gray-500");
+                return false
+
+
+
+            }else if (name != "" && esCorreoValido){
+                document.getElementById("Enviar").classList.add("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                document.getElementById("Errormsg1").style.display = "none"
+                return true
+
+
+            }else{
+
+                document.getElementById("Errormsg1").style.display = "none"
+                document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                document.getElementById("Enviar").classList.add("bg-gray-500");
+                return false
+
+            }
+
+        }
+
+        function sendu(){
+
+                const validation = dataverify()
+                
+                if (validation){
+                    const fechaActual = new Date();
+
+                    const nombre = document.getElementById("Nombre").value.trim();
+                    const email = document.getElementById("Email").value.trim();
+                    const dia = document.getElementById("Dia").textContent;
+                    const mes = document.getElementById("Mes").textContent;
+                    const año = fechaActual.getFullYear();
+                    const hora = document.getElementById("Hora").textContent;
+
+                    fetch('https://submit-emails.vercel.app/api/submit-email', {  // Reemplaza con la URL de tu API
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ 
+                            email: email, 
+                            nombre: nombre,
+                            dia: dia,
+                            mes: mes, 
+                            año: año,
+                            hora: `${hora}:00`
+                         })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Respuesta de la API:", data);
+                        alert("Datos enviados correctamente");
+                    })
+                    .catch(error => {
+                        console.error("Error al enviar:", error);
+                        alert("Error al enviar los datos");
+                    });
+
+
+
+                }
+
+
 
 
 
             }
-
-
-        }
 
 
 
@@ -251,7 +320,7 @@
 
             const selectMes = document.getElementById("Mes").textContent;
             const actualMes = meses[mes]
-            console.log(selectMes)
+            
 
             if (selectMes == "Diciembre"){
 
