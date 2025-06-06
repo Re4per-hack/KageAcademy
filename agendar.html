@@ -6,515 +6,530 @@
         <meta charset="UTF-8">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="h-[1500px]">
 
-        <div class="  z-10 fixed flex title-background w-full h-[100px] ">
+    <body  >
+
+
+        <div id="Carga" class="grid relative  place-items-center h-screen " style="display: none;">
+
+            <div class="absolute w-12 h-12 border-4 border-white  border-t-transparent rounded-full animate-spin "></div>
+
+            <p class="absolute text-2xl text-white translate-y-20" style="font-family: 'Coolvetica';">Enviando datos para la reunion, no cierre esta ventana</p>
+            <div class="absolute w-full h-full bg-[url('./Images/skull.png')] [background-size:60px] [background-repeat:repeat] opacity-5"></div>
+        </div>
+
+
+        <div id="Calendar" class="h-[1500px]"  >
+
+            <div class="  z-10 fixed flex title-background w-full h-[100px] ">
             <div class="absolute w-full h-[1px]  bg-white bottom-0">
 
 
             </div>
 
 
-        </div>
+            </div>
 
 
-        <p class="absolute text-white z-0  text-[50px] left-1/2 top-40  w-full px-10 -translate-x-1/2 text-center  " style="font-family: 'Coolvetica';">
-      Elije la mejor fecha para tu hora gratuita en Kage Academy
-    </p>
-    
-    <div class="relative  title-background w-full top-[400px] h-[70px]"> 
-        
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Mes</p>
-        
-    
-    </div>
+            <p class="absolute text-white z-0  text-[50px] left-1/2 top-40  w-full px-10 -translate-x-1/2 text-center  " style="font-family: 'Coolvetica';">
+        Elije la mejor fecha para tu hora gratuita en Kage Academy
+            </p>
 
-    <div class="relative top-[450px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
-
-        <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
-
-        <div id="MesL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
-
-            <img id="MesLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
-
-        </div>
-        
-        <div  id="MesR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
-
-            <img id="MesRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="relative  title-background w-full top-[500px] h-[70px]"> 
-        
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Día</p>
-    
-    
-    </div>
-
-    <div class="relative top-[550px] left-1/2 -translate-x-1/2 w-[200px] h-[40px]" style="background-color: #262525;">
-
-        <p id="Dia" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10</p>
-
-        <div id="DiaL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
-
-            <img id="DiaLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
-        </div>
-        
-        <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
-
-            <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
-
-        </div>
-    </div>
-
-    
-
-    <div class="relative  title-background w-full top-[600px] h-[70px]"> 
-        
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Hora (Según horario EEUU)</p>
-    
-    </div>
-
-    <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
-
-        <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
-
-        <div id="HoraL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center  " >
-
-            <img id="HoraLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
-
-            
-        </div>
-        
-        <div id="HoraR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background place-items-center" >
-
-            <img id="HoraRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
-
-        </div>
-
-    </div>
-
-
-    <div class="relative  title-background w-full top-[700px] h-[70px]"> 
-        
-        <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">2025</p>
-    
-    
-    </div>
-
-
-    <div class="relative top-[720px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
-
-
-        <p id="Errormsg1" display="none" class="absolute right-0 text-[#9c3123] " style="font-style: italic;  font-size: 15px; font-family: 'Arial';" > Ingrese un correo electrónico válido.</p>
-
-        <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
-        
-        <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" onchange="dataverify();" style=" font-size: 25px; font-family: 'Coolvetica';">
-            
-        </input>
-
-    </div>
-
-
-    <div class="relative top-[780px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
-
-        <p class="absolute px-0 top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
-
-        
-         
-        <input id="Nombre" class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-size: 25px; font-family: 'Coolvetica';" onchange="dataverify();">
-    
-            
-        </input>
 
         
 
-    </div>
-
-    <div id="Enviar" onclick="sendu();" class="relative grid left-1/2  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl " >
-
-        <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Pedir cita</p>
-
-
-    </div>
-
-
-    <script>
-
         
         
-        document.getElementById("Enviar").classList.add("bg-gray-500");
-
-        document.getElementById("Errormsg1").style.display = "none"
-
-        function dataverify(){
-            const input = document.getElementById("Email");
-            const email = input.value.trim();
-            const esCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            
-            const input2 = document.getElementById("Nombre");
-            const name = input2.value.trim();
-            
-            if (!esCorreoValido){
-
-                document.getElementById("Errormsg1").style.display = "block"
-                document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
-                document.getElementById("Enviar").classList.add("bg-gray-500");
-                return false
-
-
-
-            }else if (name != "" && esCorreoValido){
-                document.getElementById("Enviar").classList.add("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
-                document.getElementById("Errormsg1").style.display = "none"
-                return true
-
-
-            }else{
-
-                document.getElementById("Errormsg1").style.display = "none"
-                document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
-                document.getElementById("Enviar").classList.add("bg-gray-500");
-                return false
-
-            }
-
-        }
-
-        function sendu(){
-
-                const validation = dataverify()
+            <div class="relative  title-background w-full top-[400px] h-[70px]"> 
                 
-                if (validation){
-                    const fechaActual = new Date();
+                <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Mes</p>
+                
+            
+            </div>
 
-                    const nombre = document.getElementById("Nombre").value.trim();
-                    const email = document.getElementById("Email").value.trim();
-                    const dia = document.getElementById("Dia").textContent;
-                    const mes = document.getElementById("Mes").textContent;
-                    const año = fechaActual.getFullYear();
-                    const hora = document.getElementById("Hora").textContent;
+            <div class="relative top-[450px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
 
-                    fetch('https://submit-emails.vercel.app/api/submit-email', {  // Reemplaza con la URL de tu API
-                        method: 'POST',
-                        headers: {
-                        'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ 
-                            email: email, 
-                            nombre: nombre,
-                            dia: dia,
-                            mes: mes, 
-                            año: año,
-                            hora: `${hora}:00`
-                         })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log("Respuesta de la API:", data);
-                        alert("Datos enviados correctamente");
-                    })
-                    .catch(error => {
-                        console.error("Error al enviar:", error);
-                        alert("Error al enviar los datos");
-                    });
+                <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
+
+                <div id="MesL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
+
+                    <img id="MesLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
+
+                </div>
+                
+                <div  id="MesR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
+
+                    <img id="MesRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+                </div>
 
 
-
-                }
-
+            </div>
 
 
+            <div class="relative  title-background w-full top-[500px] h-[70px]"> 
+                
+                <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Día</p>
+            
+            
+            </div>
 
+            <div class="relative top-[550px] left-1/2 -translate-x-1/2 w-[200px] h-[40px]" style="background-color: #262525;">
 
-            }
+                <p id="Dia" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10</p>
 
+                <div id="DiaL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
 
+                    <img id="DiaLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
+                </div>
+                
+                <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
+                    <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+                </div>
+            </div>
 
             
 
-        
-        
-
-        // bg-gradient-to-t from-[#1EA968] to-[#6BA69A] cursor-pointer      
-
-        const fechaActual = new Date();
-
-        const dia = fechaActual.getDate();        
-        const mes = fechaActual.getMonth() ;    
-        const año = fechaActual.getFullYear();
-        const hora = fechaActual.getHours();
-
-        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-               "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        
-        document.getElementById("Hora").innerText = `${hora}:00`;
-        document.getElementById("Dia").innerText = dia + 1;
-        document.getElementById("Mes").innerText = meses[mes];
-
-        remaker();
-
-
-        document.getElementById("DiaR").addEventListener("click", function() {
-
-            const selectDay = document.getElementById("Dia").textContent;
+            <div class="relative  title-background w-full top-[600px] h-[70px]"> 
+                
+                <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">Hora (Según horario EEUU)</p>
             
-            document.getElementById("Dia").innerText = 1 + parseInt(selectDay);
+            </div>
+
+            <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
+
+                <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
+
+                <div id="HoraL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center  " >
+
+                    <img id="HoraLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
+
+                    
+                </div>
+                
+                <div id="HoraR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background place-items-center" >
+
+                    <img id="HoraRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
+
+                </div>
+
+            </div>
+
+
+            <div class="relative  title-background w-full top-[700px] h-[70px]"> 
+                
+                <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" style="font-family: 'Coolvetica';">2025</p>
             
-            remaker();
-
-
-        });
-
-        document.getElementById("DiaL").addEventListener("click", function() {
-
-            const selectDay = document.getElementById("Dia").textContent;
             
-            document.getElementById("Dia").innerText =  parseInt(selectDay) - 1;
+            </div>
+
+
+            <div class="relative top-[720px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
+
+
+                <p id="Errormsg1" display="none" class="absolute right-0 text-[#9c3123] " style="font-style: italic;  font-size: 15px; font-family: 'Arial';" > Ingrese un correo electrónico válido.</p>
+
+                <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
+                
+                <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" onchange="dataverify();" style=" font-size: 25px; font-family: 'Coolvetica';">
+                    
+                </input>
+
+            </div>
+
+
+            <div class="relative top-[780px]  left-1/2 -translate-x-1/2 w-[500px]  h-20">
+
+                <p class="absolute px-0 top-0 text-white text-xl" style="font-family: 'Coolvetica';">Nombre</p>
+
+                
+                
+                <input id="Nombre" class="absolute group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none" style="font-size: 25px; font-family: 'Coolvetica';" onchange="dataverify();">
             
-            remaker();
+                    
+                </input>
 
-
-        });
-
-        document.getElementById("MesL").addEventListener("click", function() {
-
-            const selectMes = document.getElementById("Mes").textContent;
-            const actualMes = meses[mes]
-            
-            if (selectMes ==  actualMes){
                 
 
-                remaker();
+            </div>
+
+            <div id="Enviar" onclick="sendu();" class="relative grid left-1/2  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[850px] rounded-2xl " >
+
+                <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Pedir cita</p>
+            </div>
+
+            
 
 
-            }else{
 
-                const newMes = meses[meses.indexOf(selectMes) - 1];
-                document.getElementById("Mes").innerText =  newMes;
-                if (newMes == actualMes){
-                    document.getElementById("Dia").innerText =  dia + 1;
+            
+        </div>
+
+
+        <script>
+
+            
+            
+            document.getElementById("Enviar").classList.add("bg-gray-500");
+
+            document.getElementById("Errormsg1").style.display = "none"
+
+            function dataverify(){
+                const input = document.getElementById("Email");
+                const email = input.value.trim();
+                const esCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                
+                const input2 = document.getElementById("Nombre");
+                const name = input2.value.trim();
+                
+                if (!esCorreoValido){
+
+                    document.getElementById("Errormsg1").style.display = "block"
+                    document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                    document.getElementById("Enviar").classList.add("bg-gray-500");
+                    return false
+
+
+
+                }else if (name != "" && esCorreoValido){
+                    document.getElementById("Enviar").classList.add("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                    document.getElementById("Errormsg1").style.display = "none"
+                    return true
+
+
                 }else{
 
-                    document.getElementById("Dia").innerText =  1 ;
+                    document.getElementById("Errormsg1").style.display = "none"
+                    document.getElementById("Enviar").classList.remove("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+                    document.getElementById("Enviar").classList.add("bg-gray-500");
+                    return false
 
                 }
-                remaker();
-            }
-
-            
-            
-            
-
-
-        });
-
-        document.getElementById("MesR").addEventListener("click", function() {
-
-            const selectMes = document.getElementById("Mes").textContent;
-            const actualMes = meses[mes]
-            
-
-            if (selectMes == "Diciembre"){
-
-                remaker();
-
-
-            }else{
-
-                const newMes = meses[meses.indexOf(selectMes) + 1];
-                document.getElementById("Mes").innerText =  newMes;
-                document.getElementById("Dia").innerText =  1;
-                remaker();
-                
 
             }
 
+            function sendu(){
+
+                    const validation = dataverify()
+                    
+                    if (validation){
+
+                        const calendar = document.getElementById("Calendar").style.display = "none"
+
+                        const carga = document.getElementById("Carga").style.display = "grid"
+
+                        const fechaActual = new Date();
+
+                        const nombre = document.getElementById("Nombre").value.trim();
+                        const email = document.getElementById("Email").value.trim();
+                        const dia = document.getElementById("Dia").textContent;
+                        const mes = document.getElementById("Mes").textContent;
+                        const año = fechaActual.getFullYear();
+                        const hora = document.getElementById("Hora").textContent;
+
+                        fetch('https://submit-emails.vercel.app/api/submit-email', { 
+                            method: 'POST',
+                            headers: {
+                            'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ 
+                                email: email, 
+                                nombre: nombre,
+                                dia: dia,
+                                mes: mes, 
+                                año: año,
+                                hora: `${hora}:00`
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("Respuesta de la API:", data);
+                            alert("Datos enviados correctamente");
+                        })
+                        .catch(error => {
+                            console.error("Error al enviar:", error);
+                            alert("Error al enviar los datos");
+                        });
+
+                    }
+
+                }
             
 
-        });
+            // bg-gradient-to-t from-[#1EA968] to-[#6BA69A] cursor-pointer      
 
-        document.getElementById("HoraL").addEventListener("click", function() {
+            const fechaActual = new Date();
 
-            const selectHora = document.getElementById("Hora").textContent;
-            const selectHoraInt = parseInt(selectHora.split(":")[0],10)
-            const newHora = selectHoraInt - 1
-            document.getElementById("Hora").innerText = `${newHora}:00`
+            const dia = fechaActual.getDate();        
+            const mes = fechaActual.getMonth() ;    
+            const año = fechaActual.getFullYear();
+            const hora = fechaActual.getHours();
 
+            const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
             
+            document.getElementById("Hora").innerText = `${hora}:00`;
+            document.getElementById("Dia").innerText = dia + 1;
+            document.getElementById("Mes").innerText = meses[mes];
+
             remaker();
-        });
-
-        document.getElementById("HoraR").addEventListener("click", function() {
-
-            const selectHora = document.getElementById("Hora").textContent;
-            const selectHoraInt = parseInt(selectHora.split(":")[0],10)
-            const newHora = selectHoraInt + 1
-            document.getElementById("Hora").innerText = `${newHora}:00` 
-
-            remaker();
-        });
 
 
-        
+            document.getElementById("DiaR").addEventListener("click", function() {
 
-        function remaker(){
-
-            
-
-            
-            const mesSelected = document.getElementById("Mes").textContent;
-            const mesSelectedInt = meses.indexOf(mesSelected) + 1;
-            const diasMes = new Date(2025, mesSelectedInt, 0).getDate();
-            const minDia = dia + 1 ;
-            const diaSelected = document.getElementById("Dia").textContent;
-            const diaSelectedInt =  parseInt(diaSelected);
-            const minMes = mes + 1
-            const minMesText = meses[mes]
-            const horaSelected = document.getElementById("Hora").textContent;
-            const horaSelectedInt = parseInt(horaSelected.split(":")[0],10 )
+                const selectDay = document.getElementById("Dia").textContent;
+                
+                document.getElementById("Dia").innerText = 1 + parseInt(selectDay);
+                
+                remaker();
 
 
-            
-            
-            document.getElementById("MesRarrow").classList.add("cursor-pointer");
-            document.getElementById("MesLarrow").classList.add("cursor-pointer");
+            });
+
+            document.getElementById("DiaL").addEventListener("click", function() {
+
+                const selectDay = document.getElementById("Dia").textContent;
+                
+                document.getElementById("Dia").innerText =  parseInt(selectDay) - 1;
+                
+                remaker();
 
 
-            // Mes
+            });
 
-            if (mesSelectedInt <= minMes ){
+            document.getElementById("MesL").addEventListener("click", function() {
 
-                document.getElementById("Mes").innerText = minMesText
-                document.getElementById("MesLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("MesLarrow").classList.remove("cursor-pointer")
+                const selectMes = document.getElementById("Mes").textContent;
+                const actualMes = meses[mes]
+                
+                if (selectMes ==  actualMes){
+                    
+
+                    remaker();
+
+
+                }else{
+
+                    const newMes = meses[meses.indexOf(selectMes) - 1];
+                    document.getElementById("Mes").innerText =  newMes;
+                    if (newMes == actualMes){
+                        document.getElementById("Dia").innerText =  dia + 1;
+                    }else{
+
+                        document.getElementById("Dia").innerText =  1 ;
+
+                    }
+                    remaker();
+                }
+
+                
+                
                 
 
-            }else if (mesSelected == "Diciembre"){
-                document.getElementById("Mes").innerText = "Diciembre"
-                document.getElementById("MesRarrow").src = "./Images/flechaoffr.png";
-                document.getElementById("MesRarrow").classList.remove("cursor-pointer")
 
+            });
 
+            document.getElementById("MesR").addEventListener("click", function() {
 
-            }else{
-
-                document.getElementById("MesLarrow").src = "./Images/flechal.png";
-                document.getElementById("MesRarrow").src = "./Images/flechar.png";
+                const selectMes = document.getElementById("Mes").textContent;
+                const actualMes = meses[mes]
                 
-            }
+
+                if (selectMes == "Diciembre"){
+
+                    remaker();
 
 
-            // DIA
+                }else{
 
+                    const newMes = meses[meses.indexOf(selectMes) + 1];
+                    document.getElementById("Mes").innerText =  newMes;
+                    document.getElementById("Dia").innerText =  1;
+                    remaker();
+                    
 
-            if ( diaSelectedInt >= diasMes ){
+                }
 
+                
 
-                document.getElementById("Dia").innerText = diasMes
-                document.getElementById("DiaRarrow").src = "./Images/flechaoffr.png";
-                document.getElementById("DiaRarrow").classList.remove("cursor-pointer")
-            }else{
+            });
 
-                document.getElementById("DiaRarrow").src = "./Images/flechar.png";
-                document.getElementById("DiaRarrow").classList.add("cursor-pointer")
-            }
+            document.getElementById("HoraL").addEventListener("click", function() {
 
+                const selectHora = document.getElementById("Hora").textContent;
+                const selectHoraInt = parseInt(selectHora.split(":")[0],10)
+                const newHora = selectHoraInt - 1
+                document.getElementById("Hora").innerText = `${newHora}:00`
 
-            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes ){
-                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
-                document.getElementById("Dia").innerText = minDia
+                
+                remaker();
+            });
 
-            }else{
+            document.getElementById("HoraR").addEventListener("click", function() {
 
-                document.getElementById("DiaLarrow").src = "./Images/flechal.png";
-                document.getElementById("DiaLarrow").classList.add("cursor-pointer")
+                const selectHora = document.getElementById("Hora").textContent;
+                const selectHoraInt = parseInt(selectHora.split(":")[0],10)
+                const newHora = selectHoraInt + 1
+                document.getElementById("Hora").innerText = `${newHora}:00` 
 
-            }
-
-            if (diaSelectedInt <= 1 ){
-
-                document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
-                document.getElementById("Dia").innerText = 1
-
-
-            }
-
-
-            // Hora 
-
-
-            if ( horaSelectedInt >= 20 ){
-
-
-                document.getElementById("Hora").innerText = `20:00`
-                document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
-                document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
-            }else{
-
-                document.getElementById("HoraRarrow").src = "./Images/flechar.png";
-                document.getElementById("HoraRarrow").classList.add("cursor-pointer")
-            }
-            
-            if ( horaSelectedInt <= 8 ){
-
-
-                document.getElementById("Hora").innerText = `19:00`
-                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
-            }else{
-
-                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
-                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
-            }
-
-            if (diaSelectedInt <= minDia && mesSelectedInt <= minMes && horaSelectedInt <= hora ){
-                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
-                document.getElementById("Hora").innerText = `${hora}:00`
-
-            }else if ( horaSelectedInt <= 8 ){
-
-
-                document.getElementById("Hora").innerText = `8:00`
-                document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
-                document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
-            }else{
-
-                document.getElementById("HoraLarrow").src = "./Images/flechal.png";
-                document.getElementById("HoraLarrow").classList.add("cursor-pointer")
-            } 
-
-        }
-
-        
-
+                remaker();
+            });
 
 
             
 
+            function remaker(){
+
+                
+
+                
+                const mesSelected = document.getElementById("Mes").textContent;
+                const mesSelectedInt = meses.indexOf(mesSelected) + 1;
+                const diasMes = new Date(2025, mesSelectedInt, 0).getDate();
+                const minDia = dia + 1 ;
+                const diaSelected = document.getElementById("Dia").textContent;
+                const diaSelectedInt =  parseInt(diaSelected);
+                const minMes = mes + 1
+                const minMesText = meses[mes]
+                const horaSelected = document.getElementById("Hora").textContent;
+                const horaSelectedInt = parseInt(horaSelected.split(":")[0],10 )
+
+
+                
+                
+                document.getElementById("MesRarrow").classList.add("cursor-pointer");
+                document.getElementById("MesLarrow").classList.add("cursor-pointer");
+
+
+                // Mes
+
+                if (mesSelectedInt <= minMes ){
+
+                    document.getElementById("Mes").innerText = minMesText
+                    document.getElementById("MesLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("MesLarrow").classList.remove("cursor-pointer")
+                    
+
+                }else if (mesSelected == "Diciembre"){
+                    document.getElementById("Mes").innerText = "Diciembre"
+                    document.getElementById("MesRarrow").src = "./Images/flechaoffr.png";
+                    document.getElementById("MesRarrow").classList.remove("cursor-pointer")
 
 
 
-        
+                }else{
+
+                    document.getElementById("MesLarrow").src = "./Images/flechal.png";
+                    document.getElementById("MesRarrow").src = "./Images/flechar.png";
+                    
+                }
+
+
+                // DIA
+
+
+                if ( diaSelectedInt >= diasMes ){
+
+
+                    document.getElementById("Dia").innerText = diasMes
+                    document.getElementById("DiaRarrow").src = "./Images/flechaoffr.png";
+                    document.getElementById("DiaRarrow").classList.remove("cursor-pointer")
+                }else{
+
+                    document.getElementById("DiaRarrow").src = "./Images/flechar.png";
+                    document.getElementById("DiaRarrow").classList.add("cursor-pointer")
+                }
+
+
+                if (diaSelectedInt <= minDia && mesSelectedInt <= minMes ){
+                    document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
+                    document.getElementById("Dia").innerText = minDia
+
+                }else{
+
+                    document.getElementById("DiaLarrow").src = "./Images/flechal.png";
+                    document.getElementById("DiaLarrow").classList.add("cursor-pointer")
+
+                }
+
+                if (diaSelectedInt <= 1 ){
+
+                    document.getElementById("DiaLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("DiaLarrow").classList.remove("cursor-pointer")
+                    document.getElementById("Dia").innerText = 1
+
+
+                }
+
+
+                // Hora 
+
+
+                if ( horaSelectedInt >= 20 ){
+
+
+                    document.getElementById("Hora").innerText = `20:00`
+                    document.getElementById("HoraRarrow").src = "./Images/flechaoffr.png";
+                    document.getElementById("HoraRarrow").classList.remove("cursor-pointer")
+                }else{
+
+                    document.getElementById("HoraRarrow").src = "./Images/flechar.png";
+                    document.getElementById("HoraRarrow").classList.add("cursor-pointer")
+                }
+                
+                if ( horaSelectedInt <= 8 ){
+
+
+                    document.getElementById("Hora").innerText = `19:00`
+                    document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+                }else{
+
+                    document.getElementById("HoraLarrow").src = "./Images/flechal.png";
+                    document.getElementById("HoraLarrow").classList.add("cursor-pointer")
+                }
+
+                if (diaSelectedInt <= minDia && mesSelectedInt <= minMes && horaSelectedInt <= hora ){
+                    document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+                    document.getElementById("Hora").innerText = `${hora}:00`
+
+                }else if ( horaSelectedInt <= 8 ){
+
+
+                    document.getElementById("Hora").innerText = `8:00`
+                    document.getElementById("HoraLarrow").src = "./Images/flechaoffl.png";
+                    document.getElementById("HoraLarrow").classList.remove("cursor-pointer")
+                }else{
+
+                    document.getElementById("HoraLarrow").src = "./Images/flechal.png";
+                    document.getElementById("HoraLarrow").classList.add("cursor-pointer")
+                } 
+
+            }
+
+            
 
 
 
-        
+                
 
 
 
 
-    </script>
+            
+
+
+
+            
+
+
+
+
+        </script>
     </body>
 
 
