@@ -19,19 +19,19 @@
         </div>
 
 
-        <div id="Respuesta" class="grid relative z-40 place-items-center h-screen " >
+        <div id="Respuesta" class="grid relative z-40 place-items-center h-screen " style="display: none;" >
 
            <a href="/" class=" z-40 grid left-1/2 translate-y-20 bg-gradient-to-t cursor-pointer from-[#1EA968] to-[#6BA69A]  place-items-center   w-[300px] h-12 bg-white top-[850px] rounded-2xl " >
 
                 <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Volver a KageAcademy</p>
             </a>
 
-            <p id="RespuestaText" class="absolute text-2xl text-white " style="font-family: 'Coolvetica';"></p>
+            <p id="RespuestaText" class="text-center px-20 absolute text-xl text-white " style="font-family: 'Coolvetica';"></p>
             <div class="absolute z-10 w-full h-full bg-[url('./Images/skull.png')] [background-size:60px] [background-repeat:repeat] opacity-5"></div>
         </div>
 
 
-        <div id="Calendar" class="h-[1500px]" style="display: none;" >
+        <div id="Calendar" class="h-[1500px]"  >
 
             <div class="  z-10 fixed flex title-background w-full h-[100px] ">
             <div class="absolute w-full h-[1px]  bg-white bottom-0">
@@ -255,8 +255,12 @@
                                 hora: `${hora}:00`
                             })
                         })
+                        .then(response => response.json())
                         .then(data => {
                             document.getElementById("RespuestaText").innerText = data.mensaje
+                            document.getElementById("Carga").style.display = "none"
+                            document.getElementById("Respuesta").style.display = "grid"
+
                         })
                         .catch(error => {
                             console.error("Error al enviar:", error);
