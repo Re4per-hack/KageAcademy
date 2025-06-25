@@ -102,12 +102,8 @@
                 </div>
             </div>
 
-            
-
             <div class="relative  title-background w-full top-[600px] h-[70px]"> 
-                
-                <p class="absolute text-white opacity-70 text-[30px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 whitespace-nowrap " style="font-family: 'Coolvetica';">Hora (Según horario EEUU)</p>
-            
+                <p class="absolute text-white opacity-70 md:text-[30px] text-[20px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 whitespace-nowrap" style="font-family: 'Coolvetica';">Hora (Según horario Los Angeles, EEUU)</p>
             </div>
 
             <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
@@ -274,13 +270,32 @@
 
             // bg-gradient-to-t from-[#1EA968] to-[#6BA69A] cursor-pointer      
 
-            const fechaActual = new Date();
+            function getLosAngelesDateParts() {
+                const parts = new Intl.DateTimeFormat('en-US', {
+                    timeZone: 'America/Los_Angeles',
+                    year: 'numeric',
+                    month: 'numeric',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    hour12: false
+                }).formatToParts(new Date());
 
-            const dia = fechaActual.getDate();        
-            const mes = fechaActual.getMonth() ;    
-            const año = fechaActual.getFullYear();
-            const hora = fechaActual.getHours();
+                const dateMap = {};
+                parts.forEach(({ type, value }) => {
+                    if (type !== 'literal') {
+                        dateMap[type] = parseInt(value, 10);
+                    }
+                });
 
+                return {
+                    dia: dateMap.day,
+                    mes: dateMap.month - 1, 
+                    año: dateMap.year,
+                    hora: dateMap.hour
+                };
+            }
+
+            const { dia, mes, año, hora } = getLosAngelesDateParts();
             const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
             
