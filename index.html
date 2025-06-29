@@ -148,57 +148,57 @@ personalizadas.
     
     
 
-    <div class="relative flex flex-row width-full place-items-center" style=" overflow-x: hidden;">
+    <div class="relative carousel flex flex-row width-full place-items-center overflow-x-auto md:overflow-x-hidden " >
         
-        <div id="carousel" class="scroll-smooth flex   place-items-center" style="transition: transform 0.3s ease;">
-          <div class="grid w-screen place-items-center">
+        <div id="carousel" class=" scroll-smooth flex  place-items-center" style="transition: transform 0.3s ease;">
+          <div class="grid w-screen place-items-center px-10 md:px-60 ">
 
             <img src="/Images/stars.png" class="w-40 mb-6">
             
             <p class="text-white grid text-2xl mb-5 text-center  px-8 relative place-items-center -translate-x-2 " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">Santiago Guzmán<img src="/Images/estados-unidos.png" class="w-6 absolute right-0"></p>
             
-            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"Muchas gracias a kageacademy y especialmente al profesor<br> Juan Pablo por el acompañamiento, tiempo y dedicación <br>que me han dado para mi formacion en la ciberseguridad,<br> muy recomendable la academia un 10/10"</p>
+            <p class="text-white text-lg md:text-xl text-center " style="font-family: 'Coolvetica';">"Muchas gracias a kageacademy y especialmente al profesor Juan Pablo por el acompañamiento, tiempo y dedicación  que me han dado para mi formacion en la ciberseguridad, muy recomendable la academia un 10/10"</p>
 
             
-
+            
           </div>
 
 
-          <div class="grid w-screen place-items-center">
+          <div class="grid w-screen place-items-center px-5 md:px-60 ">
 
             <img src="/Images/stars.png" class="w-40 mb-6">
             
             <p class="text-white grid text-2xl mb-5 text-center  px-8 relative place-items-center -translate-x-2 " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">Martín Saavedra<img src="/Images/colombia.png" class="w-6 absolute right-0"></p>
             
-            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"Me gustó que no son videos grabados. Los profes explican todo en el momento y responden tus dudas de una."</p>
-
+            <p class="text-white text-sm md:text-xl text-center" style="font-family: 'Coolvetica';">"Me gustó que no son videos grabados. Los profes explican todo en el momento y responden tus dudas de una."</p>
+            
           </div>
 
-          <div class="grid w-screen place-items-center">
+          <div class="grid w-screen place-items-center px-5 md:px-60 ">
 
 
             <img src="/Images/stars.png" class="w-40 mb-6">
             <p class="text-white grid text-2xl mb-5 text-center  px-8 relative place-items-center -translate-x-2 " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">Facundo Herrera<img src="/Images/argentina.png" class="w-6 absolute right-0"></p>
             
-            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"La verdad, altísima la calidad de las clases. Todo en vivo, <br>nada grabado, y los profes te explican con una paciencia tremenda. <br>Aprendí un montón sin sentir que estaba solo <br>del otro lado de la compu. Re contra recomendable."</p>
-
+            <p class="text-white text-sm md:text-xl text-center" style="font-family: 'Coolvetica';">"La verdad, altísima la calidad de las clases. Todo en vivo, nada grabado, y los profes te explican con una paciencia tremenda. Aprendí un montón sin sentir que estaba solo del otro lado de la compu. Re contra recomendable."</p>
+            
           </div>
+
+          
           
           
           
         </div>
-
-        <div class="absolute bg-white w-full h-1 bottom-0"></div>
-
-        
       
+      <div class=" hidden md:block  absolute bg-white w-full h-1 bottom-0"></div>
+        
     </div>
 
-    <div  class=" absolute w-[50px] rounded-full h-[95px] mr-10 bg-white cursor-pointer right-0 top-1/2 -translate-y-1/2 grid place-items-center  " style="user-select: none;"><img src="/Images/flechar.png" class="w-7"> </div>
-    <div  class=" absolute w-[50px] rounded-full h-[95px] ml-10 bg-white cursor-pointer left-0 top-1/2 -translate-y-1/2 grid place-items-center " style="user-select: none;" ><img src="/Images/flechal.png" class="w-7"></div>
+    <div  class=" absolute w-[50px] hidden rounded-full h-[95px] mr-2 md:mr-10 bg-white cursor-pointer right-0 md:top-1/2 -translate-y-1/2 md:grid place-items-center top-28 " style="user-select: none;"><img src="/Images/flechar.png" class="w-7"> </div>
+    <div  class=" absolute w-[50px] hidden rounded-full h-[95px] ml-2 md:ml-10 bg-white cursor-pointer left-0 md:top-1/2 -translate-y-1/2 md:grid place-items-center top-28 " style="user-select: none;" ><img src="/Images/flechal.png" class="w-7"></div>
 
-    <div id="botonR" onclick="moverDivderecha()" class=" absolute w-[50px] rounded-full  h-[100px] mr-10 bg-[#272727] cursor-pointer right-0 top-1/2  transition-all hover:-translate-y-[55px] hover:translate-x-1 duration-300 -translate-y-1/2 grid place-items-center " style="user-select: none;"><img src="/Images/flechar.png" class="w-7"> </div>
-    <div id="botonL" onclick="moverDivizquierda()" class=" absolute w-[50px] rounded-full h-[100px] ml-10 bg-[#272727] cursor-pointer left-0 top-1/2 -translate-y-1/2 grid place-items-center transition-all hover:-translate-y-[55px] hover:-translate-x-1 duration-30 " style="user-select: none;" ><img src="/Images/flechal.png" class="w-7"></div>
+    <div id="botonR" onclick="moverDivderecha()" class=" absolute w-[50px] rounded-full  h-[100px] mr-2 md:mr-10 bg-[#272727] hidden cursor-pointer right-0 top-28 md:top-1/2  transition-all hover:-translate-y-[55px] hover:translate-x-1 duration-300 -translate-y-1/2 md:grid place-items-center " style="user-select: none;"><img src="/Images/flechar.png" class="w-7"> </div>
+    <div id="botonL" onclick="moverDivizquierda()" class=" absolute w-[50px] rounded-full h-[100px] ml-2 md:ml-10 bg-[#272727] cursor-pointer left-0 hidden top-28 md:top-1/2 -translate-y-1/2 md:grid place-items-center transition-all hover:-translate-y-[55px] hover:-translate-x-1 duration-30 " style="user-select: none;" ><img src="/Images/flechal.png" class="w-7"></div>
     
     
     
@@ -251,9 +251,9 @@ personalizadas.
 
 
   <div class="flex relative w-full md:h-[650px] h-[800px] flex-col sm:flex-row gap-4 bg-gradient-to-b from-[#1a1919] to-black/40"  >
-    <p class=" absolute left-1/2 text-center top-4 -translate-x-1/2 md:translate-x-0 md:top-8 md:left-8 text-white font-extrabold md:text-[60px] text-[30px]" style="white-space: nowrap; overflow: hidden; text-overflow: ellip; font-family: 'Roboto'; font-style: Italic; ">Conócenos antes de pagar</p>
+    <p class=" absolute left-1/2 text-center top-4 -translate-x-1/2 md:translate-x-0 md:top-8 md:left-8 text-white font-extrabold md:text-[60px] text-[28px]" style="white-space: nowrap; overflow: hidden; text-overflow: ellip; font-family: 'Roboto'; font-style: Italic; ">Conócenos antes de pagar</p>
   
-    <p class="absolute left-1/2 text-center md:text-left top-20 -translate-x-1/2 md:translate-x-0 text-white md:top-36 md:left-10 w-5/6" style="font-family: 'Roboto'; font-style: italic; font-size: 20px;">
+    <p class="absolute left-1/2 text-[18px] md:text-[20px] text-center md:text-left top-20 -translate-x-1/2 md:translate-x-0 text-white md:top-36 md:left-10 w-5/6" style="font-family: 'Roboto'; font-style: italic;">
       <span>Es importante para KageAcademy que los estudiantes </span>
       <span style="font-weight: 900;">se sientan atendidos</span>,
       <span> incluso antes de pagar. Es por ello que </span>
@@ -261,7 +261,7 @@ personalizadas.
       <span> para resolver dudas, explicar el temario y ajustar las clases según tu horario. Basta con dar clic </span>
       <a class="text-[#4d4d4d] font-extrabold hover:text-white" href="/agendar.html" style="font-size: 22px;">aquí<br></a>
       <span class="font-extrabold text-[30px] md:text-[55px]" style="font-family: 'Roboto'; font-style: italic;"><br>¿Qué obtienes al pagar?</span>
-      <span><br><br>Al ser un proceso de aprendizaje completamente personalizado, necesitamos conocer tu disponibilidad para las clases. Antes de realizar el pago, obtendrás 1 hora gratuita para agendar tu disponibilidad con un profesor. También podrás conocer nuestra metodología antes de pagar. ( ; </span>
+      <span><br><br>Al ser un proceso de aprendizaje completamente personalizado, necesitamos conocer tu disponibilidad para las clases. Antes de realizar el pago, obtendrás 1 hora gratuita para agendar tu disponibilidad con un profesor. Despues, al pagar, se te otorgará acceso a las clases según la disponibilidad acordada.</span>
     </p>
 
     

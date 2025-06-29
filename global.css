@@ -77,4 +77,32 @@ img, video, canvas, svg {
 }
 
 
+.carousel {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Personalización solo visible cuando se necesita */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ffffff #1a1a1a; /* Firefox */
+}
+
+/* Webkit (Chrome, Safari) */
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 100%;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+
 
