@@ -3,7 +3,7 @@
 <head>
   <title>Kage Academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academia de ciberseguridad con clases en vivo. Aprende hacking ético, pentesting y seguridad informática de forma práctica y guiada">
+  <meta name="description" content="No mas clases pregrabadas. Aprende hacking ético, pentesting y seguridad informática con profesores en vivo">
   <meta name="keywords" content="clases de ciberseguridad online, curso de hacking ético, academia de ciberseguridad, clases de hacking en vivo, hacking, ciberseguridad, pentesting, academia, seguridad informática">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="global.css">
@@ -142,6 +142,105 @@ personalizadas.
 
   </div>
 
+  <div class="flex relative w-full md:h-[650px] h-[800px]   bg-[#1a1919] ">
+    
+    
+
+    <div class="relative flex flex-row width-full place-items-center" style=" overflow-x: hidden;">
+        
+        <div id="carousel" class="scroll-smooth flex   place-items-center" style="transition: transform 0.3s ease;">
+          <div class="grid w-screen place-items-center">
+
+
+            <div class="p-[2px] rounded-full bg-gradient-to-t inline-block mb-7 from-[#00E5FF] to-[#00D37F] ">
+              <img src="/Images/foto.png" alt="Imagen" class="rounded-lg w-32  h-auto">
+            </div>
+            <p class="text-white grid text-md text-center  px-5 relative place-items-center -translate-x-2 " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">Santiago Guzmán<img src="/Images/estados-unidos.png" class="w-3 absolute right-0"></p>
+            
+            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"Gracias a KageAcademy pude sacar mi OSCP y de forma<br> muy divertida e interactiva"</p>
+
+          </div>
+          <div class="grid w-screen place-items-center">
+
+
+            <div class="p-[2px] rounded-full bg-gradient-to-t inline-block mb-7 from-[#00E5FF] to-[#00D37F] ">
+              <img src="/Images/foto.png" alt="Imagen" class="rounded-lg w-32  h-auto">
+            </div>
+            <p class="text-white grid text-md text-center  px-5 relative place-items-center -translate-x-2  " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">David Rodríguez<img src="/Images/espana.png" class="w-3 absolute right-0"></p>
+            
+            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"Gracias a KageAcademy pude sacar mi OSCP y de forma<br> muy divertida e interactiva"</p>
+
+          </div>
+          <div class="grid w-screen place-items-center">
+
+
+            <div class="p-[2px] rounded-full bg-gradient-to-t inline-block mb-7 from-[#00E5FF] to-[#00D37F] ">
+              <img src="/Images/foto.png" alt="Imagen" class="rounded-lg w-32  h-auto">
+            </div>
+            <p class="text-white grid text-md text-center  px-5 relative place-items-center -translate-x-2 " style="font-family: 'Roboto'; font-weight: bold; font-style: italic;">Omar <img src="/Images/espana.png" class="w-3 absolute right-0"></p>
+            
+            <p class="text-white text-xl text-center" style="font-family: 'Coolvetica';">"Gracias a KageAcademy pude sacar mi OSCP y de forma<br> muy divertida e interactiva"</p>
+
+          </div>
+          
+          
+          
+        </div>
+
+        
+      
+    </div>
+
+    <div id="botonR" onclick="moverDivderecha()" class=" absolute w-[50px] rounded-full h-[100px] mr-10 bg-[#272727] cursor-pointer right-0 top-1/2 -translate-y-1/2 grid place-items-center" style="user-select: none;"><img src="/Images/flechar.png" class="w-7"> </div>
+    <div id="botonL" onclick="moverDivizquierda()" class=" absolute w-[50px] rounded-full h-[100px] ml-10 bg-[#272727] cursor-pointer left-0 top-1/2 -translate-y-1/2 grid place-items-center " style="user-select: none;" ><img src="/Images/flechal.png" class="w-7"></div>
+    <script>
+
+      let contador = 0;
+
+      let desplazamiento = 0;
+      let pestanSize  = window.innerWidth
+
+      function moverDivderecha() {
+        if (contador < 2 ){
+
+          
+
+          contador += 1 
+
+          console.log(contador)
+          desplazamiento -= pestanSize; 
+          const div = document.getElementById("carousel");
+          div.style.transform = `translateX(${desplazamiento}px)`;
+
+        }
+        
+      }
+
+      function moverDivizquierda() {
+
+        
+
+        if (contador >= 1 ){
+
+          contador -= 1 
+          console.log(contador)
+
+          desplazamiento += pestanSize; 
+          const div = document.getElementById("carousel");
+          div.style.transform = `translateX(${desplazamiento}px)`;
+
+        }
+
+      }
+    
+    
+    
+    </script>
+
+  </div >
+
+
+
   <div class="flex relative w-full md:h-[650px] h-[800px] flex-col sm:flex-row gap-4 bg-gradient-to-b from-[#1a1919] to-black/40"  >
     <p class=" absolute left-1/2 text-center top-4 -translate-x-1/2 md:translate-x-0 md:top-8 md:left-8 text-white font-extrabold md:text-[60px] text-[30px]" style="white-space: nowrap; overflow: hidden; text-overflow: ellip; font-family: 'Roboto'; font-style: Italic; ">Conócenos antes de pagar</p>
   
@@ -153,7 +252,7 @@ personalizadas.
       <span> para resolver dudas, explicar el temario y ajustar las clases según tu horario. Basta con dar clic </span>
       <a class="text-[#4d4d4d] font-extrabold hover:text-white" href="/agendar.html" style="font-size: 22px;">aquí<br></a>
       <span class="font-extrabold text-[30px] md:text-[55px]" style="font-family: 'Roboto'; font-style: italic;"><br>¿Qué obtienes al pagar?</span>
-      <span><br><br>Al ser un proceso de aprendizaje completamente personalizado, necesitamos conocer tu disponibilidad para las clases. Justo después de realizar el pago, recibirás un correo electrónico confirmando la transacción y, en menos de 2 horas, un profesor se comunicará contigo. </span>
+      <span><br><br>Al ser un proceso de aprendizaje completamente personalizado, necesitamos conocer tu disponibilidad para las clases. Antes de realizar el pago, obtendrás 1 hora gratuita para agendar tu disponibilidad con un profesor. También podrás conocer nuestra metodología antes de pagar. ( ; </span>
     </p>
 
     
@@ -188,7 +287,7 @@ personalizadas.
       <div class="absolute bg-black w-[340px] h-[710px] rounded-lg top-16 " ></div>
       <div class="relative bg-black w-[340px] h-[710px] rounded-lg top-16  border-4 border-[#0c0d0a] transition-all duration-300 ease-in-out hover:-translate-y-4 hover:translate-x-4" style="background-color: #1a1919;">
         <div class="grid w-full h-24 relative place-items-center ">
-          <p class="relative text-white -top-1" style="font-family: 'Coolvetica'; font-style: italic; font-size: 40px; font-weight: 400;">Básico</p>
+          <p class="relative text-white -top-1" style="font-family: 'Coolvetica'; font-style: italic; font-size: 40px; font-weight: 400;">Plan mensual</p>
           <div class="absolute bottom-0 w-full h-[1px] bg-white"></div>
         </div>
 
@@ -212,7 +311,7 @@ personalizadas.
         </div>
 
         <div class="grid w-full h-24  relative place-items-center">
-          <p class="relative text-white medium" style="text-align: center; font-family: 'Inter'; font-size: 20px; font-style: italic; font-weight: 500;">¿Vida ocupada?, Te asignamos un horario personalizado</p>
+          <p class="relative text-white medium" style="text-align: center; font-family: 'Inter'; font-size: 20px; font-style: italic; font-weight: 500;">¿Vida ocupada? Te asignamos un horario personalizado.</p>
           
         </div>
         <div class="grid w-full h-44 relative place-items-center">
@@ -220,7 +319,7 @@ personalizadas.
           <p class="relative text-white medium -top-4" style="text-align: center; font-family: 'Montserrat'; font-size: 30px; font-weight: bold;">15$ / Mes</p>
           <div class="absolute w-36 h-7 bottom-2 rounded-xl " style="background: #000000;" alt="Fondo registrarse"></div>
           <a href="/agendar.html" class="absolute  hover:text-white text-black bottom-2 w-36 h-7 rounded-xl pb-4 transition-all duration-300 ease-in-out pt-1 hover:-translate-y-2 hover:translate-x-2 leading-5 font-extrabold bg-gradient-to-t from-[#00E5FF] to-[#00D37F]  cursor-pointer" style="  text-align: center; font-family: 'Roboto', sans-serif;  font-size: 18px; font-style: italic;">
-            Suscribete
+            Suscríbete
           </a>
           
         </div>
@@ -233,7 +332,7 @@ personalizadas.
       <div class="absolute bg-black w-[340px] h-[710px] rounded-lg  mt-28 md:mt-0 md:top-16"></div>
       <div class="relative bg-black w-[340px] h-[710px] rounded-lg mt-28 md:mt-0 border-4 md:top-16 border-[#0c0d0a] transition-all duration-300 ease-in-out hover:-translate-y-4 hover:translate-x-4" style="background-color: #1a1919;">
         <div class="grid w-full h-24 relative place-items-center ">
-          <p class="relative text-white -top-1" style="font-family: 'Coolvetica'; font-style: italic; font-size: 40px; font-weight: 400;">Avanzado</p>
+          <p class="relative text-white -top-1" style="font-family: 'Coolvetica'; font-style: italic; font-size: 40px; font-weight: 400;">Plan individual</p>
           <div class="absolute bottom-0 w-full h-[1px] bg-white"></div>
         </div>
 
