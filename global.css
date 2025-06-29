@@ -1,4 +1,10 @@
 
+:root {
+  color-scheme: dark;
+  background-color: #141212; /* tu color base */
+  color: #e0e0e0; /* color de texto por defecto */
+}
+
 
 body {
     background-color: #1a1919;
@@ -9,6 +15,9 @@ body {
     background: #0c0d0a;
 }
 
+img, video, canvas, svg {
+  filter: none !important;
+}
 
 
 
