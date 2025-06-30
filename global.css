@@ -3,6 +3,7 @@
   color-scheme: dark;
   background-color: #141212; /* tu color base */
   color: #e0e0e0; /* color de texto por defecto */
+  touch-action: manipulation;
 }
 
 
