@@ -277,8 +277,20 @@
                                 hora: `${hora}:00`
                             })
                         })
-                        .then(response => response.json())
+                        .then(async response => {
+                                const status = response.status;
+                                const data = await response.json();
+
+                                if (status === 200) {
+                                    const url = new URL(window.location);
+                                    url.searchParams.set('connectionStatus', 'True');
+                                    window.history.replaceState({}, '', url);
+                                }
+
+                                return data;
+                            })
                         .then(data => {
+                            const sts = 
                             document.getElementById("RespuestaText").innerText = data.mensaje
                             document.getElementById("Carga").style.display = "none"
                             document.getElementById("Respuesta").style.display = "grid"
