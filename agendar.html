@@ -100,13 +100,13 @@
 
                 <p id="Mes" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">Septiembre</p>
 
-                <div id="MesL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   touch-manipulation" >
+                <div onclick="interact('MesL');" id="MesL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   touch-manipulation" >
 
                     <img id="MesLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
                 </div>
                 
-                <div  id="MesR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
+                <div onclick="interact('MesR');" id="MesR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
                     <img id="MesRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -127,12 +127,12 @@
 
                 <p id="Dia" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10</p>
 
-                <div id="DiaL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
+                <div onclick="interact('DiaL');" id="DiaL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center   " >
 
                     <img id="DiaLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
                 </div>
                 
-                <div onclick="interact();" id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
+                <div onclick="interact('DiaR');" id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
                     <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -145,16 +145,16 @@
 
             <div class="relative  top-[650px] left-1/2 -translate-x-1/2 w-[250px] h-[40px]" style="background-color: #262525;">
 
-                <p id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
+                <p  id="Hora" class="absolute text-white left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-2xl" style="font-family: 'Coolvetica';">10:00</p>
 
-                <div id="HoraL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center  " >
+                <div  id="HoraL" class="absolute grid -translate-x-5 -translate-y-1/2 top-1/2 w-11 rounded-full  h-11 title-background place-items-center  " >
 
                     <img id="HoraLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
 
                     
                 </div>
                 
-                <div id="HoraR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background place-items-center" >
+                <div onclick="interact('HoraR')" id="HoraR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background place-items-center" >
 
                     <img id="HoraRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -214,15 +214,19 @@
 
 
         <script>
+        
+        let isThrottled = false;
 
-            function interact(){
+            
 
-                const webhookUrl = 'https://discord.com/api/webhooks/1390698996699238465/mRCyInHK8-rLj-KZNR4OGrW8zfgvlEayZSo1Z7IBAK46ywSemJOucRd3-NOrRKvWvHyh';
+            function interact(accion){
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1390705045607284737/GP-jHQiYQ8D7iZIPtcAAy3ZfEHz1ivRIQXt5z-7EEbXyJ115JvkB3d3IW8i61q5HcuGr';
 
                 const data = {
                     content: `
                     
-                        Una interacción de un usuario
+                        El usuario hizo la siguiente accion: ${accion}
                     
                     `
 

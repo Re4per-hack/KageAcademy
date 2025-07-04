@@ -62,7 +62,7 @@
     <div class="md:absolute fixed md:right-10 right-4 grid bottom-3 w-56 group  h-40 z-30 ">
       <a href="https://wa.me/573016842993" target="_blank">
 
-        <img class="absolute z-40  w-16 bottom-0 left-1/2 cursor-pointer  -translate-x-1/2" src="/Images/whatsapp_black_icon.png"/>
+        <img onclick="interact('Obtener Whatsapp')" class="absolute z-40  w-16 bottom-0 left-1/2 cursor-pointer  -translate-x-1/2" src="/Images/whatsapp_black_icon.png"/>
 
       </a>
       
@@ -263,6 +263,31 @@ personalizadas.
     
     
     <script>
+
+      function interact(accion){
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1390705045607284737/GP-jHQiYQ8D7iZIPtcAAy3ZfEHz1ivRIQXt5z-7EEbXyJ115JvkB3d3IW8i61q5HcuGr';
+
+                const data = {
+                    content: `
+                    
+                        El usuario hizo la siguiente accion: ${accion}
+                    
+                    `
+
+                }
+
+                fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+
+
+
+            }
 
       window.addEventListener('load', () => {
         const el = document.querySelector('.carousel');
