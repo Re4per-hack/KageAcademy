@@ -178,7 +178,7 @@
 
                 <p class="absolute top-0 text-white text-xl" style="font-family: 'Coolvetica';">Email</p>
                 
-                <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none text-[20px] md:text-[25px]" onchange="dataverify();" style=" font-family: 'Coolvetica';">
+                <input id="Email" type="email"  class="absolute group w-full text-white bottom-0 origin-center focus:bg-transparent ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none focus:outline-none text-[20px] md:text-[25px]" onchange="dataverify(); tryMail(event);" style=" font-family: 'Coolvetica';">
                     
                 </input>
 
@@ -216,6 +216,14 @@
         <script>
         
         let isThrottled = false;
+
+            function tryMail(event){
+
+                 const valor = event.target.value;
+
+                interact(` Un Email ingresado: ${valor}`);
+
+            }
 
             
 
