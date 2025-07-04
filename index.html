@@ -265,8 +265,39 @@ personalizadas.
     
     
     <script>
+        window.addEventListener("scroll", () => {
+          scrollDetector();
+        });
+
+      // 
+
 
       interact('Se ha ingresado a /index.html' )
+
+      function scrollDetector(){
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1390758258431623168/nFbW3jT1KfQ_gViLjTrJWrDcuDseChXZ-WrSBwZO7VG-R70i8uaqgOIp7M7gMCriV7Zz';
+
+                const data = {
+                    content: `
+                    
+                        Se hizo scroll en index.html
+                    
+                    `
+
+                }
+
+                fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+
+
+
+            }
 
       function interact(accion){
 
