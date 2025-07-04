@@ -132,7 +132,7 @@
                     <img id="DiaLarrow" class="h-6 w-auto " src="./Images/flechal.png">  </img>
                 </div>
                 
-                <div id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
+                <div onclick="interact();" id="DiaR" class="absolute grid translate-x-5 -translate-y-1/2 -right-0 top-1/2 w-11 rounded-full  h-11 title-background  place-items-center" >
 
                     <img id="DiaRarrow" class="h-6 w-auto " src="./Images/flechar.png">  </img>
 
@@ -214,6 +214,31 @@
 
 
         <script>
+
+            function interact(){
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1384667880439681094/i2W3rXDdMyQtkp3TPQrNEtMTkSdOGNH1cCEqmW6SxZynT5S_ZyT4p-Aw9GBG2I07OPOg';
+
+                const data = {
+                    content: `
+                    
+                        Una interacción de un usuario
+                    
+                    `
+
+                }
+
+                fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+
+
+
+            }
 
             
             
