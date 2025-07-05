@@ -1,0 +1,142 @@
+<!DOCTYPE html >
+<html lang="es">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5STG6VJ5');</script>
+        <!-- End Google Tag Manager -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="global.css">
+        <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="canonical" href="https://kageacademy.com/agendar.html" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17288775033"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17288775033');
+        </script>
+
+        
+    </head>
+
+
+
+
+    <body>
+
+        <div class="fixed z-30 flex top-0 w-screen  md:h-32 h-20 title-background shadow-md items-center">
+            <img class="relative md:translate-x-0 md:ml-[15px] left-1/2 -translate-x-1/2 md:left-0 top-0 md:w-64 w-36 h-auto " alt="Logo" src="./Images/title.webp" style=" user-select: none;">
+
+            <div class="absolute bottom-0 w-screen h-px bg-white"></div>
+
+        </div>
+
+        <p class="absolute text-2xl text-center w-[90%]  text-white top-40 left-1/2 -translate-x-1/2" style="font-family: 'Coolvetica' ;">Agenda tu primera clase ahora, te contactamos en menos de 30 minutos ;)</p>
+
+
+        <div class="relative top-[380px]  left-1/2 -translate-x-1/2 w-2/3 md:w-[500px]  h-20">
+
+                <p class="absolute px-0 top-0 text-white text-xl" style="font-family: 'Coolvetica';">Número de contacto </p>
+
+                
+                
+                <input id="Numero"  class="absolute px-14 group w-full text-white bottom-0 origin-center ease-in-out duration-500 bg-transparent border-b  border-[#656565] transition-all focus:border-white outline-none text-[20px] md:text-[25px] focus:outline-none" style="font-family: 'Coolvetica';" onchange="tryMail(event); dataverify(); ">
+                    <p class="absolute left-2 top-12 text-xl opacity-30" style="font-family: 'Coolvetica' ;">
+
+                            +57
+                    </p>
+                    
+                </input>
+
+                
+
+        </div>
+
+        <div id="Enviar" onclick="sendu();" class="absolute grid left-1/2  place-items-center -translate-x-1/2  w-[200px] h-12 bg-white top-[500px] rounded-2xl cursor-pointer" >
+
+                <p class="text-white text-2xl" style="font-family: 'Coolvetica';">Enviar</p>
+        </div>
+
+        <p id="texto" class="hidden absolute text-xl left-1/2 -translate-x-1/2 top-[600px]" style="font-family: 'Coolvetica';" class="absolute " >Listo!, te contactaremos en breve</p>
+
+
+
+
+
+        <script>
+
+            function tryMail(event){
+
+                const valor = event.target.value;
+
+                interact(` Un Email ingresado: ${valor}`);
+
+            }
+
+            function sendu(){
+
+                document.getElementById("texto").classList.remove("hidden");
+                document.getElementById("texto").classList.add("block");
+
+            }
+
+            
+
+            
+
+            function interact(accion){
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1390727272486666301/-UiOP5MCJufMVinvIlJkoqg4qAlF62tfAiFBrDRca3KEJzpAZoXZ3p1oa9974g5hntn_';
+
+                const data = {
+                    content: `
+                    
+                        El usuario hizo la siguiente accion: ${accion}
+                    
+                    `
+
+                }
+
+                fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+
+
+
+            }
+
+
+            document.getElementById("Enviar").classList.add("bg-gray-500");
+
+            function dataverify(){
+                
+                
+
+                document.getElementById("Enviar").classList.add("bg-gradient-to-t", "from-[#1EA968]", "to-[#6BA69A]", "cursor-pointer");
+
+    
+
+
+                
+            }
+
+            
+        </script>
+        
+        
+
+
+        
+
+    </body>
